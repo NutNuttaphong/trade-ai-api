@@ -1,9 +1,9 @@
 package com.trade.stocks.repository;
 
 import com.trade.stocks.entity.Stock;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.ListCrudRepository;
 import java.util.Optional;
 
-public interface StockRepository extends JpaRepository<Stock, Long> {
+public interface StockRepository extends ListCrudRepository<Stock, Long> {
     Optional<Stock> findBySymbol(String symbol);
 }
