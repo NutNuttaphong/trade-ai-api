@@ -1,0 +1,9 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "packages": {
+    "java": "17"
+  },
+  "deploy": {
+    "startCommand": "java -XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0 $JAVA_OPTS -Dserver.port=${PORT:-8080} -jar build/libs/trade-stocks-api-0.0.1-SNAPSHOT.jar"
+  }
+}
